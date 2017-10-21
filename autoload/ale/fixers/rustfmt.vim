@@ -10,7 +10,6 @@ function! ale#fixers#rustfmt#Fix(buffer) abort
 
     return {
     \   'command': ale#Escape(l:executable)
-    \       . ' --write-mode plain'
     \       . (empty(l:options) ? '' : ' ' . l:options)
     \       . ' %t',
     \   'read_temporary_file': 1,

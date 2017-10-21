@@ -20,7 +20,6 @@ Execute(The rustfmt callback should return the correct default values):
   \ {
   \   'read_temporary_file': 1,
   \   'command': ale#Escape('xxxinvalid')
-  \     . ' --write-mode plain'
   \     . ' %t',
   \ },
   \ ale#fixers#rustfmt#Fix(bufnr(''))
@@ -33,7 +32,6 @@ Execute(The rustfmt callback should include custom rustfmt options):
   \ {
   \   'read_temporary_file': 1,
   \   'command': ale#Escape('xxxinvalid')
-  \     . ' --write-mode plain'
   \     . ' ' . g:ale_rust_rustfmt_options
   \     . ' %t',
   \ },
